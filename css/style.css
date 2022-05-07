@@ -1,0 +1,178 @@
+body {
+    font-size: 16px;
+    background: hsl(233, 47%, 7%);
+    color: #fff;
+    line-height: 1.5;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+h1,
+p, .stats-li a {
+    margin-bottom: 5px;
+}
+section {
+    min-height: 96vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: hsl(244, 38%, 16%);
+    border-radius: 15px;
+}
+.content {
+    flex: 1 0 50%;
+    padding: 10px 47px;
+}
+strong {
+    color: hsl(277, 64%, 61%);
+}
+.heading {
+    color: hsl(0, 0%, 100%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    padding: 10px;
+    font-size: 36px;
+}
+.info {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    padding: 10px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.img {
+    flex: 1 0 50%;
+    position: relative;
+    width: 100%;
+    height: 446px;
+    background-image: url("../images/image-header-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px; 
+}
+.img-overlay {
+    position: absolute;
+    background-color: hsl(277, 75%, 28%);
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.55;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.stats {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    margin-top: 30px;
+}
+.stats h2 {
+    font-size: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.stats-li {
+    margin-right: 60px;
+
+}
+.amount {
+    color: hsl(0, 0%, 100%);
+}
+.stat {
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+@media (max-width: 1021px) {
+    .content {
+        text-align: center;
+        margin: 0; 
+    }
+    .card {
+        flex-direction: column-reverse;
+        display: block;
+    }
+    .card,
+    .img, 
+    .img-overlay {
+        border-radius: 0;
+    }
+    .content .stats {
+        flex-direction: column;
+    }
+    .stats-li {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background:grey;
+}
+.modal-content {
+    margin: 20% auto;
+    width: 70%;
+    background-color: bisque;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalOpen;
+    animation-duration: 1s;
+}
+.modal-header {
+    background:  hsl(277, 75%, 28%);
+    padding: 15px;
+}
+.modal-body{
+    padding: 10px 20px;
+}
+.modal-footer {
+    padding: 10px;
+}
+.closeBtn {
+    color: #fff;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+.button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.button:hover, .button:focus {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 10px;
+}
+@keyframes modalOpen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
